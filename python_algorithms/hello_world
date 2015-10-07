@@ -2,4 +2,5 @@
 
 #get everything set up first...
 
-print('Hello World!')
+def say_hello:
+    return 'Hello World!'

@@ -20,11 +20,9 @@ class MaxHeap:
     
     @staticmethod
     def _parent(i):
-        #return int(i-1 / 2)
         return int((i+1)/2) - 1
      
     def _swap(self,i,j):
-        #print("swapping",i+1,"(",self.heap[i],") and",j+1,"(",self.heap[j],")")
         temp = self.heap[i]
         self.heap[i] = self.heap[j]
         self.heap[j] = temp
@@ -33,26 +31,6 @@ class MaxHeap:
         l = self._left(i)
         r = self._right(i)
         largest = None
-        
-        """"
-        print("")
-        print("i is",i+1,"(",self.heap[i],")")
-        if (l < self.heap_size):
-            print("left is",self.heap[l])
-        else:
-            print("left is null")
-        if (r < self.heap_size):
-            print("right is",self.heap[r])
-        else:
-            print("right is null")
-        
-        if (i != 0):
-            print("parent is",self._parent(i)+1,"(",self.heap[self._parent(i)],")")
-        else:
-            print("parent is null (root node)")
-        print("")
-        """
-        
         
         if l < self.heap_size and self.heap[l] > self.heap[i]:
             largest = l

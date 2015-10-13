@@ -12,7 +12,7 @@ class TestInsertionSort(test_sort.TestSort):
     def test_merge_sort(self):     
         # Generate an unsorted and sorted list of the same values
         # to verify a sort worked
-        unsorted_list = random.sample(range(1000000), 5000) 
+        unsorted_list = random.sample(range(1000000), 500) 
         sorted_list = copy.copy(unsorted_list).sort()
         
         self.assertEqual(merge_sort.merge_sort(unsorted_list), sorted_list)
